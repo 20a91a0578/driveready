@@ -1,0 +1,4 @@
+nodejs:::::::::connecting front and backend==programming interface.
+mongodb::::::::::::to store the data
+expressjs:::::::::::for API request and response
+mongodb atlas/studio 3t

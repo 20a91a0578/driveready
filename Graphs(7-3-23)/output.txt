@@ -1,0 +1,17 @@
+
+ InDEGREE:
+indeg 0= 0
+indeg 1= 0
+indeg 2= 1
+indeg 3= 2
+indeg 4= 3
+indeg 5= 1
+
+ OUtDEGREE:
+outdeg 0= 0
+outdeg 1= 3
+outdeg 2= 2
+outdeg 3= 0
+outdeg 4= 1
+outdeg 5= 1
+1 2 3 4 5 

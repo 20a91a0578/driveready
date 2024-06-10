@@ -1,0 +1,137 @@
+features of in java:
+Simple
+Architectural neutral
+portable
+Platfrom Independent
+robust-----strongly typed,garbage collection,exception handling,platform independent
+secure
+object oreinted
+Compiled and Interpreted
+Multi Thread
+dynamic
+High performance
+Distributed
+
+
+
+
+
+
+OOPS CONCEPTS
+1.Object--->Anything  that exist physically in real world.object stores instance of class
+2.Class-->Group of simliar objects.blue print or model for creating object
+3.Abstractionnn-->hiding of unwanted details and show requored
+4.Encapsulation-->wraping of data and methods into a single entity
+5.Inheritance-->Acquring properties from another class
+6.Polymorphism-->Single Object with different behaviours at different times.
+
+
+
+OBJECT CREATION:
+Syntax
+Classname <objectname>=new Classname();
+Ex:
+Employe e=new Employe();
+
+Accesing members in class
+Syntax:
+Objectname.membername/methodname();
+ex:
+e.name;
+e.show()
+
+
+TOCREATE ARRAY OF OBJECTS:
+classname var[]=new classname[size];
+
+
+
+Constructor:
+Constructor is aspecial type of member method it can be used to intialise the members of a class at time of object creation.
+RULES:::
+==================
+1.Constructor name should be classname.
+2.constructir doesn't return any value,eventhhough it doesn't return any value don't use void.
+3.automatically executed at time of object creation.
+4.constructor will take arguments.
+=============================
+Types
+=================================
+1.default
+2.parameterized
+
+
+
+THIS ::
+=======================
+1.it is used to refer currently executing object.
+2.it is used to differentiate local variables and global variables.
+
+
+
+
+Inheritance
+==============
+1.acquiring properties from parent to child class
+2.creating a new class from existing class
+3.we use "extends"  to implement inheritance
+4.Advantage is "code reusability" & "reduces code complexity".
+
+types of inheritance
+==============================
+1.Single level.
+2.Multiple Inheritance.(can not be implemented using  classes because of Ambiguity error).
+3.Multi level Inheritance.
+4.Hierachical Inheritance.
+5.Hybrid Inheritance.
+
+Method Overriding:
+=================================
+both parent and child have same method singnature .
+
+FINAL:::
+===================
+1.to create constants.*****************final float PI=3.14;
+2.to avoid method overloading***************class A{
+public final void a(){
+}
+}
+class B extends A
+{
+public void a()=============[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ERror
+{
+}
+
+}
+3.to avoid inheritance.
+final class A{
+}
+class B extends A{
+}======================[[[[[[[[[[[[[ERrOr
+
+=====================================================================================================================
+||													         ||
+||													         ||
+||				MCQ MENTOR"S FOR OBJECTIVE ORIENTD					         ||
+||													         ||
+||													         ||
+=====================================================================================================================
+
+
+Polymorphism
+1.Compile Time/static/early binding.
+2.run time/dynamic/late binding.
+==========================
+Dynamic Method Dispatching
+A single object of parent class is overloaded with different child classes instances in different times and executes the method accordung to instances of the classes.
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[""instanceof()" key word is used toknow which class instance is present inthe the object.]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+
+Abstract Class/Method
+ex:
+abstract class classname
+{
+public abstract  returntype methodname()
+{
+}
+}

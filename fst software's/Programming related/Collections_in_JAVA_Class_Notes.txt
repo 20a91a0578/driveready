@@ -1,0 +1,1024 @@
+03-10-2022:
+===========
+Some Important methods of Collection Framework in java:
+========================================================
+Collections(C):
+--------------
+	Collections.sort(list) 			-> It sort the all the elements of that list.
+	
+	Collections.copy(list1,list2) 	-> It is used to copy the list of objects from one list to 	
+										another.
+	Collections.shuffle(list1)		-> It is used to rearrange all the elements of the list.
+	
+	Collections.reverse(list1)		-> It is used to reverse the objects of the given list.
+	
+	Collections.swap(list1,index1,index2) -> It is used to swap the elements in the list by the 
+										  specified indexes.
+										  
+    Collections.fill(list1,Object)	-> It is used to fill the all the elements of the list with 
+										a value.
+	
+	Collections.frequency(list,ele) -> It is used to find the frequency of an element in the list.
+	
+	Collections.replaceAll(list,old_value,new_value) -> It is used to replace a old with new value.
+	
+	Collections.max(list)	-> It is used to find the max element in a Collection object.
+	
+	Collections.min(list)	-> It is used to find the min element in the Collection Object.
+	
+	Collections.rotate(list,how_many)	-> It is used to rotate an collection object n times.
+	
+	Collections.binarySearch(list,ele)	-> It is used to search an element is there or not. It 
+											return the index of the element if exist otherwise returns negative value.
+	
+	Collections.sort(list,Collections.reverseOrder()) -> To get the reverse order of the list.
+	
+
+-----------------------------------------------------------------------------------------------
+Arrays(C): It is used to do manipulations on arrays.
+-------
+       Arrays.sort(arr)
+       Arrays.sort(arr,start_index,end_index); 
+       Arrays.binarySearch(arr,int)
+	   Arrays.binarySearch(arr,start_index,end_index,ele)
+       Arrays.equals(arr1,arr2)
+       Arrays.fill(arr,value)
+	   Arrays.fill(arr,start_index,end_index,value)
+	   Arrays.copyOf(arr,new_length)
+	   Arrays.copyOfRange(arr,from_index,end_index)
+       Arrays.asList(String[])
+
+
+-------------------------------------------------------------------------------------------
+ArrayList(C): It is just like an array but it stores the objects as an elements.
+Example:
+	ArrayList<Integer> al=new ArrayList<Integer>;
+	[10,20,30]
+	["Green","Red","Blue"]
+
+Methods:
+--------
+	1. al.add(value)				-> To add an object ot list.
+	2. al.add(index,value)			-> To add an object at specific index.
+	3. al.get(index)				-> To get the object at specific index.
+	4. al.set(index,update_value)	-> To update the value at specific index.
+	5. al.remove(index)				-> To remove the object at specific index.
+	6. al.contains(value)			-> To check an object contains in a list.
+	7. al.subList(start,end)		-> To return sublist from start to end-1 indexes.
+	8. al.addAll(newList)			-> To add one list to another list.
+	9. al.clone()					-> To create an exact copy of an existing list.
+	10.al.removeAll()				-> To remove all the objects from a list.
+	11.al.isEmpty()					-> To check ArrayList is empty or not.
+	12.al.trimToSize()				
+	13.al.ensureCapacity()
+
+------------------------------------------------------------------------------------------
+PriorityQueue(C): It follows FIFO order.
+
+	PriorityQueue<String> q=new PriorityQueue<String>();
+    PriorityQueue<Integer> pq1 = new PriorityQueue<>(10, Collections.reverseOrder());
+
+Methods:
+--------
+	1. q.add(value)
+	2. q.addAll(q1)
+	3. q.offer(value)
+	4. q.clear()
+	5. q.size()
+	6. q.contains(value)
+	7. q.peek() 			- First element in the queue
+	8. q.poll()				- Remove the first element
+	9. q.toString()
+	
+
+------------------------------------------------------------------------------------------
+Stack(C): LIFO
+   It is the child class of vector contains only one constructor.
+   Stack<Integer> s=new Stack<>();
+   
+   Methods:
+		void push(Object o);
+		Object pop()	-		Remove and return top of stack.
+		Object peek()	-		Return top the stack.
+		boolean empty()
+		int search(Object o) - 	Returns the offset from top of the stack if the 	
+								object is available, otherwise returns -1.
+
+
+
+---------------------------------------------------------------------------------------------
+HashSet:
+	It is used to store objects and duplicates are not allowed.
+	HashSet<Integer> hs=new HashSet<>();
+
+Methods:
+	boolean add(Object)			-> To add an element to Set.
+	Object remove(Object)		-> To remove the given object from the set.
+	int size()					-> To find the number of elements in a Set.
+	boolean isEmpty()			-> To Check it set is Empty or not.
+	boolean contains(Object)	-> To check an element contains or not.
+	void clear()				-> To clear the elements from the set.
+	
+----------------------------------------------------------------------------------------------
+TreeSet: It is used to arrange all the elements in ascending order then we go for TreeSet.
+
+	TreeSet<Integer> t=new TreeSet<>();
+	TreeSet<Integer> t=new TreeSet<>(Comparator obj); // For Customized Sorting.
+	
+Methods:
+	boolean add(Object)			-> To add an element to Set.
+	Object remove(Object)		-> To remove the given object from the set.
+	int size()					-> To find the number of elements in a Set.
+	boolean isEmpty()			-> To Check it set is Empty or not.
+	boolean contains(Object)	-> To check an element contains or not.
+	void clear()				-> To clear the elements from the set.
+	Object first()				-> To get the first element
+	Object last()				-> To get the last element
+	etc.
+	
+-------------------------------------------------------------------------------------
+HashMap:
+
+    HashMap<key_type,value_type> obj= new HashMap<>();
+	
+    HashMap<Integer,String> hp=new HashMap<Integer,String>();
+
+    Output:
+	hp 		-> 	{1=Red, 2=Green, 3=Black, 4=White, 5=Blue}
+	Keys 	->	[1, 2, 3, 4, 5]
+	Values	->	[Red, Green, Black, White, Blue]
+	Pair	->	[1=Red, 2=Green, 3=Black, 4=White, 5=Blue]
+
+Methods:
+--------
+	1. hp.put(key,value)
+	2. hp.get(key)
+	3. hp.size()
+	4. hp.putAll(hp_obj)
+	   hp.remove(key)
+	5. hp.clear()
+	6. hp.isEmpty()
+	7. hp.clone()
+	8. hp.containsKey(key)
+	    if(hp.containsKey(x[i])))
+		    hp.put(x[i],hp.get(x[i])+1);
+		else
+		    hp.put(x[i],1);
+			
+	9. hp.containsValue(value)
+	10.hp.entrySet() 	- Set with pair
+	11.hp.keySet()		- Set with Keys
+	12.hp.values()		- Set with values
+	13.hp.getOrDefault(key,0)
+	
+	for(Map.Entry x:hash_map.entrySet())
+	{  
+    	System.out.println(x.getKey()+" "+x.getValue());
+	}
+----------------------------------------------------------------------------------------
+TreeMap: It is used to Store the elements with key-value pair and in the sorted order by the key.
+
+	TreeMap<Integer,String> tree_map=new TreeMap<Integer,String>(); 
+
+	for (Map.Entry<Integer,String> entry : tree_map.entrySet())
+   	{
+    	    System.out.println(entry.getKey() + "=>" + entry.getValue());
+   	}
+	
+	Set<String> keys = tree_map1.keySet();
+
+Methods:
+--------
+
+	1. put(index,value)
+	2. putAll(tree1)
+	3. containsKey(key)
+	4. containsValue(value)
+	5. firstEntry()
+	6. lastEntry()
+	7. firstKey()
+	8. lastKey()
+	9. descendingKeySet() 	-> 	Reverse order view of the keys
+	10.floorEntry(key) 		-> 	get a key-value mapping associated with the greatest key 
+								less than or equal to the given key.
+	11.floorKey(key) 		-> 	get the greatest key less than or equal to the given key.
+	12.headMap(key) 		-> 	portion of a map whose keys are strictly less than a given 
+								key.
+	13.headMap(key,true) 	-> 	portion of a map whose keys are less than or equal to a 	
+								given key.
+	14.higherEntry(key) 	-> 	get the least key strictly greater than the given key. 
+								Return null if there is no such key.
+	15.lowerEntery(key) 	-> 	strictly less than
+	16.lowerKey(key)
+	17.pollFirstEntry()
+	18.pollLastEntry()
+	19.subMap(key1,key2)
+	20.tailMap(key)
+	21.ceilingEntry(key)
+
+
+-----------------------------------------------------------------------------------------
+Collections Framework
+=====================
+An Array is an indexed collection of fixed number of homogenious data elements.
+
+Limitations of Arrays:
+
+1. Arrays are fixed in size.
+2. Arrays can hold only Homogenious elements
+   It can be solved by using Object array.
+3. Arrays concept not built based on some data structure.
+
+To solve all these problems => Collections.
+
+Collections will solve all the limitations of arrays and every collection object based on some data structure hence readymade method support is available for every requirement.
+
+Collection:
+A group of indiviudal objects as a single entity is called collection.
+	Ex: List, Set, Queue
+
+Collections:
+It is utility class present in java.util package to define several utility methods for collections.
+Note: Refer above methods for Collections class.
+	
+Collection Framework:
+It defines several classes and interfaces which can be used to represent a group of objects as a single entity.
+Ex:
+	Collection, List, Set, Queue, SortedSet, Map, SortedMap etc. -> Interfaces
+	ArrayList, LinkedList, Stack, PriorityQueue, HashSet, TreeSet, HashMap, TreeMap etc. -> classes
+
+Key interfaces:
+
+1)	Collection
+
+2)	List
+
+3)	Set
+
+4)	SortedSet
+
+5)	Queue
+
+6)	Map
+
+7)	SortedMap
+
+
+
+List:
+=====
+The classes which implements List(I)
+1. ArrayList
+2. LinkedList
+3. Vecotr
+4. Stack
+
+1. ArrayList:
+-------------
+	-> Insertion order is preserved.
+	-> Duplicate objects are allowed.
+	-> Hetrogeneous objects are allowed.
+	-> null insertion is possible.
+
+ArrayList<Integer> al=new ArrayList<>();
+
+Note: Creates an empty ArrayList object with default initial capacity 10.
+
+Once AL reaches its max capacity then a new AL object will be created with 
+		new_capacity=current capacity*(3/2)+1
+
+
+Prog-1:
+package list;
+import java.util.*;
+public class Excercise3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Create a list and add some colors to the list
+		  List<String> list_Strings = new ArrayList<String>();
+		  list_Strings.add("Red");
+		  list_Strings.add("Green");
+		  list_Strings.add("Orange");
+		  list_Strings.add("White");
+		  list_Strings.add("Black");
+		  
+		  //Print the list
+		  System.out.println(list_Strings);
+		  
+		  //Now insert a color at the first and last position of the list
+		  list_Strings.add(0, "Pink");
+		  list_Strings.add(5, "Yellow");
+		  
+		  //Print the list
+		  for(String element : list_Strings) 
+		    System.out.println(element);
+	}
+
+}
+
+Output:
+[Red, Green, Orange, White, Black]
+Pink
+Red
+Green
+Orange
+White
+Yellow
+Black
+-------------------------------------------
+
+//Prog-2: How to iterate the elements of a list.
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+public class IteratorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list_Strings = new ArrayList<String>();
+		  list_Strings.add("Red");
+		  list_Strings.add("Green");
+		  list_Strings.add("Orange");
+		  list_Strings.add("White");
+		  list_Strings.add("Black");
+		  Iterator i=list_Strings.iterator();
+		  while(i.hasNext())
+		  {
+			  System.out.println(i.next());
+			  i.remove();
+		  }
+		  // Print the list
+		  System.out.println(list_Strings);
+	}
+}
+
+Output:
+Red
+Green
+Orange
+White
+Black
+[]
+
+Note:
+ArrayList and Vector classes implements RandomAccess interface, so that any random element we can access with same speed. Hence, if our frequent operation is retrivable operation then best suitable data structure is ArrayList.
+----------------------------------------------------------------------------------------------
+2) LinkedList(C):
+	-> The uderlying data structure is double linked list.
+	-> Insertion order is preserved.
+	-> Duplicate objects are allowed.
+	-> Hetrogeneous objects are allowed.
+	-> null insertion is possible.
+
+LinkedList l1=new LinkedList();
+
+The following 6 specific methods.
+
+1. void addFirst(Object o);
+2. void addLast(Object o);
+3. Object removeFirst();
+4. Object removeLast();
+5. Object getFirst();
+6. Object getLast();
+
+
+
+Prog-3:
+package list;
+import java.util.*;
+public class LinkedListDemo {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	LinkedList l=new LinkedList();
+	l.addFirst(10);
+	l.addFirst("Technical");
+	l.addLast("HuB");
+	l.addLast(40);
+	System.out.println(l);
+	l.add("T-");
+	System.out.println(l);
+	}
+
+}
+Output:
+[Technical, 10, HuB, 40]
+[Technical, 10, HuB, 40, T-]
+
+Prog-4: ListIterator Demo
+import java.util.*;
+public class ListIteratorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> al=new ArrayList<>();
+		al.add("Bala krishna");
+		al.add("Chiru");
+		al.add("Nagarjuna");
+		al.add("Venky");
+		System.out.println(al);
+		ListIterator li=al.listIterator();
+		while(li.hasNext())
+		{
+			String name=(String)li.next();
+			if(name.equals("Venky"))
+				li.remove();
+			if(name.equals("Chiru"))
+				li.set("Charan");
+			if(name.equals("Nagarjuna"))
+				li.set("Chaitany");
+			
+		}
+		System.out.println(al);
+	}
+}
+Output:
+[Bala krishna, Chiru, Nagarjuna, Venky]
+[Bala krishna, Charan, Chaitany]
+---------------------------------------------------------------------------------------
+3) Stack(C): LIFO
+   It is the child class of vector contains only one constructor.
+   Stack s=new Stack();
+   
+   Methods:
+		void push(Object o);
+		Object pop()	-		Remove and return top of stack.
+		Object peek()	-		Return top the stack.
+		boolean empty()
+		int search(Object o) - 	Returns the offset from top of the stack if the 	
+								object is available, otherwise returns -1.
+
+Prog-5:
+Valid Parentheses
+https://leetcode.com/problems/valid-parentheses/
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+	Open brackets must be closed by the same type of brackets.
+	Open brackets must be closed in the correct order.
+	Every close bracket has a corresponding open bracket of the same type.
+ 
+Example 1:
+Input: s = "()"
+Output: true
+
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> st=new Stack<>();
+        String in="({[";
+        String out=")}]";
+        for(int i=0;i<s.length();i++)
+        {
+            if(in.contains(s.charAt(i)+""))
+                st.push(s.charAt(i));
+            else
+            {
+                if(!st.empty() && (char)st.peek()==in.charAt(out.indexOf(s.charAt(i))))
+                    st.pop();
+                else
+                    return false;
+            }
+            
+        }
+        if(st.empty())
+           return true;
+        else
+            return false;
+        
+    }
+}
+
+----------------------------------------------------------------
+Iterator:
+-> We can apply Iterator concept for any Collection object. It is a universal cursor.
+
+-> While iterating we can perform remove operation also, in addition to read operation.
+
+	Iterator itr=C.iterator();
+	where C -> Any Collection type object.
+	
+Iterator interface has following 3 methods.
+	-> public boolean hasNext()
+	-> public Object next()
+	-> public void remove()
+
+
+Prog-6:
+package list;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class IteratorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list_Strings = new ArrayList<String>();
+		  list_Strings.add("Red");
+		  list_Strings.add("Green");
+		  list_Strings.add("Orange");
+		  list_Strings.add("White");
+		  list_Strings.add("Black");
+		  Iterator i=list_Strings.iterator();
+		  while(i.hasNext())
+		  {
+			  System.out.println(i.next());
+			  i.remove();
+		  }
+		  // Print the list
+		  System.out.println(list_Strings);
+	}
+
+}
+
+Output:
+Red
+Green
+Orange
+White
+Black
+[]
+
+---------------------------------------------------------------------------
+HashSet: It is used to store the elements with no order and not allowed duplicate values.
+-> The underlying data structure is HashTable
+-> Duplicate objects are not allowed.
+-> Insertion order is not preserved.
+-> Hetrogeneous objects are allowed.
+-> null insertion is possible only once.
+
+Program to find how many elements are there in a list after removing the dupliate elements from a list.
+Prog-7:
+import java.util.*;
+class Sample
+{
+   public static int findElements(int x[])
+   {
+      HashSet<Integer> h1=new HashSet<>();
+	  for(int i=0;i<nums.length;i++)
+	     h1.add(nums[i]);
+	  return h1.size();
+   }
+   public static void main(String args[])
+   {
+      int n,i,nums[];
+	  Scanner sc=new Scanner(System.in);
+	  n=sc.nextInt();
+	  nums=new int[n];
+	  for(i=0;i<n;i++)
+	    nums[i]=sc.nextInt();
+	  System.out.println(findElements(nums));
+   }
+}
+
+----------------------------------------------------------------------
+TreeSet:
+Prog-8:
+package set;
+import java.util.*;
+public class TreeSet1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeSet<String> t=new TreeSet<>();
+		t.add("Rama");
+		t.add("Ravana");
+		t.add("Sita");
+		t.add("Laxman");
+		t.add("Hanuma");
+		for(String ele:t)
+			System.out.println(ele);
+	}
+}
+
+Output:
+Hanuma
+Laxman
+Rama
+Ravana
+Sita
+
+---------------------------------------------------------------------------
+Prog-9:
+To Print reverse order [descending order]
+package set;
+import java.util.*;
+public class TreeSet1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeSet<String> t=new TreeSet<>(new MyComparator());
+		t.add("Rama");
+		t.add("Ravana");
+		t.add("Sita");
+		t.add("Laxman");
+		t.add("Hanuma");
+		for(String ele:t)
+			System.out.println(ele);
+	}
+}
+class MyComparator implements Comparator
+{
+	public int compare(Object o1,Object o2)
+	{
+		String s1=(String)o1;
+		String s2=(String)o2;
+		return s2.compareTo(s1);
+	}
+}
+
+Output:
+Sita
+Ravana
+Rama
+Laxman
+Hanuma
+
+---------------------------------------------------------------------------------
+Program to add customized objects to TreeSet.
+Prog-10:
+package set;
+import java.util.*;
+class Employee implements Comparable
+{
+	int eid;
+	String ename;
+	float esal;
+	public Employee(int eid,String ename,float esal)
+	{
+		this.eid=eid;
+		this.ename=ename;
+		this.esal=esal;
+	}
+	public String toString()
+	{
+		return "Eid-"+eid+" Ename-"+ename+" Esal-"+esal;
+	}
+	public int compareTo(Object o)
+	{
+		Employee e=(Employee)o;
+		if(esal<e.esal)
+			return 1;
+		else if(esal>e.esal)
+			return -1;
+		else
+			return 0;
+		
+	}
+}
+public class TreeSet2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stubEm
+		
+		Employee e1=new Employee(101,"Ramesh",50000);
+		Employee e2=new Employee(102,"Siva",40000);
+		Employee e3=new Employee(103,"Ganesh",60000);
+		TreeSet<Employee> t=new TreeSet<>();
+		t.add(e1);
+		t.add(e2);
+		t.add(e3);
+        for(Employee e:t)
+        	System.out.println(e);
+	}
+
+}
+
+Output:
+Eid-103 Ename-Ganesh Esal-60000.0
+Eid-101 Ename-Ramesh Esal-50000.0
+Eid-102 Ename-Siva Esal-40000.0
+
+---------------------------------------------------------------------
+
+Limitation of Iterator:
+1) By using Iterator and Enumeration objects always move towards the forward direction.
+
+2) Iterator object will support only read and remove operations only and can't perform replacement and addition of new object.
+
+ListIterator:
+============
+1) ListIterator is the child interface of Iterator.
+2) By using ListIterator we can move either to the forward or to the backward direction i.e ListIterator is a bidirection cursor.
+
+ArrayList<Integer> l=new ArrayList<>();
+ListIterator li=l.listIterator(); 
+
+package list;
+import java.util.*;
+public class ListIteratorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> al=new ArrayList<>();
+		al.add("Bala krishna");
+		al.add("Chiru");
+		al.add("Nagarjuna");
+		al.add("Venky");
+		System.out.println(al);
+		ListIterator li=al.listIterator();
+		while(li.hasNext())
+		{
+			String name=(String)li.next();
+			if(name.equals("Venky"))
+				li.remove();
+			if(name.equals("Chiru"))
+				li.set("Charan");
+			if(name.equals("Nagarjuna"))
+				li.set("Chaitany");
+			
+		}
+		System.out.println(al);
+	}
+
+}
+
+Output:
+[Bala krishna, Chiru, Nagarjuna, Venky]
+[Bala krishna, Charan, Chaitany]
+
+
+=========================================================================================
+
+Map:
+====
+-> If we want to represent a group of objects as key-value pairs then we should go for Map.
+-> Both key & value are objects.
+-> Duplicate keys are not allowed, but values can be duplicated.
+-> Each key-value pair is called Entry.
+
+	RollNo	Name
+	101		Durga		-> Entry
+	102		Srinu
+	103		Ravi
+	104		Sambu
+	105		Sundar
+
+-> There is no relationship b/w Collection and Map.
+
+-> Collection ment for a group of indiviudal objects where as Map ment for a group of key-value pairs.
+
+-> Map is not child interface of Collection.
+
+Methods:
+	Object put(Object key, Object Value)
+	Object get(Object key)
+		-> Key not available then it returns null.
+	Object remove(Object key)
+	boolean containsKey(Object key)
+	boolean containsValue(Object value)
+	int size()
+	boolean isEmpty()
+	Set keySet()
+	Collection values()
+	Set entrySet()
+	
+Entry (I):
+==========
+-> Each key-value pair is called one Entry.
+-> Without existing Map Object there is no chance of Entry object. Hence, interface Entery is defined inside the Map interface.
+
+
+	interface Map
+	{
+	   interface Entry
+	   {
+	       Object getKey();
+		   Object getValue();
+		   Object setValue();
+	   }
+	}
+
+
+HashMap(C):
+===========
+-> The underlying data structure is HashTable
+-> Hetrogeneous objects are allowed for both keys and values.
+-> duplicate keys are not allowed but the values can be duplicated.
+-> Insertion order is not preserved because it is based on Hashcode of keys.
+-> null key is allowed only once but null values are allowed any number of times.
+
+
+Constructors:
+1) HashMap hm=new HashMap();
+	Creates an empty HashMap object with default initial capacity level is 16 & default fill ratio 0.75%.
+
+2) HashMap hm=new HashMap(int initialcapacity);
+
+3) HashMap hm=new HashMap(int capacity,float fillratio);
+
+4) HashMap hm=new HashMap(Map m);
+
+
+Prog:
+package map;
+import java.util.*;
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String,Integer> hm=new HashMap<>();
+		hm.put("Chiru",55);
+		hm.put("Balayya",58);
+		hm.put("Nagarjuna", 53);
+		hm.put("Venky", 51);
+		hm.put("NTR", 38);
+		hm.put("PSPK", 48);
+		hm.put("Ramcharan", 39);
+		System.out.println(hm);
+		System.out.println(hm.put("Chiru",63));
+		
+		Set<String> s=hm.keySet();
+		System.out.println(s);
+		
+		Collection<Integer> c=hm.values();
+		System.out.println(c);
+		
+		Set s1=hm.entrySet();
+		Iterator i=s1.iterator();
+		while(i.hasNext())
+		{
+			Map.Entry m=(Map.Entry)i.next();
+			System.out.println(m.getKey()+"  "+m.getValue());
+			
+			if(m.getKey().equals("Nagarjuna"))
+				m.setValue(54);
+		}
+		System.out.println(s1);
+		
+	}
+}
+Output:
+{Chiru=55, Venky=51, Ramcharan=39, PSPK=48, Balayya=58, NTR=38, Nagarjuna=53}
+55
+[Chiru, Venky, Ramcharan, PSPK, Balayya, NTR, Nagarjuna]
+[63, 51, 39, 48, 58, 38, 53]
+Chiru  63
+Venky  51
+Ramcharan  39
+PSPK  48
+Balayya  58
+NTR  38
+Nagarjuna  53
+[Chiru=63, Venky=51, Ramcharan=39, PSPK=48, Balayya=58, NTR=38, Nagarjuna=54]
+
+--------------------------------------------
+
+SortedMap(I):
+============
+If we want to represent a group of entries according to some sorting order then we should go for SortedMap.
+The sorting should be done based on the keys but not based on the values.
+
+SortedMap Interface is the child interface of Map.
+SortedMap interface defines the following 6 specific methods.
+
+1) Object firstKey()
+2) Object lastKey()
+3) SortedMap headMap(Object key1)
+4) SortedMap tailMap(Object key1)
+5) SortedMap subMap(Object key1,Object key2)
+6) Comparator comparator()
+
+TreeMap(C):
+-> The underlying data structure is RED-BLACK Tree.
+-> Insertion order is not preserved & all entries are inserted according to some Sorting order of keys.
+-> If we are depending on default natural sorting order then the keys should be homogenious & comparable, otherwise we will get ClassCastException.
+-> If we are defining our own sorting order by comparator then the keys need not be homogenious & comparable.
+-> duplicate keys are not allowed but values can be duplicated.
+
+1) TreeMap t=new TreeMap();
+	for default natural sorting order
+2) TreeMap t=new TreeMap(Comparator c);
+	for customized sorting order.
+
+
+package map;
+import java.util.*;
+
+
+public class TreeMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeMap<String,Integer> hm=new TreeMap<>();
+		hm.put("Chiru",55);
+		hm.put("Balayya",58);
+		hm.put("Nagarjuna", 53);
+		hm.put("Venky", 51);
+		hm.put("NTR", 38);
+		hm.put("PSPK", 48);
+		hm.put("Ramcharan", 39);
+		System.out.println("Tree Map:"+hm);
+		System.out.println(hm.put("Chiru",63));
+		
+		Set<String> s=hm.keySet();
+		System.out.println(s);
+		
+		Collection<Integer> c=hm.values();
+		System.out.println(c);
+		
+		Set s1=hm.entrySet();
+		Iterator i=s1.iterator();
+		while(i.hasNext())
+		{
+			Map.Entry m=(Map.Entry)i.next();
+			System.out.println(m.getKey()+"  "+m.getValue());
+			
+			if(m.getKey().equals("Nagarjuna"))
+				m.setValue(54);
+		}
+		System.out.println(s1);
+		
+	}
+
+}
+
+Output:
+Tree Map:{Balayya=58, Chiru=55, NTR=38, Nagarjuna=53, PSPK=48, Ramcharan=39, Venky=51}
+55
+[Balayya, Chiru, NTR, Nagarjuna, PSPK, Ramcharan, Venky]
+[58, 63, 38, 53, 48, 39, 51]
+Balayya  58
+Chiru  63
+NTR  38
+Nagarjuna  53
+PSPK  48
+Ramcharan  39
+Venky  51
+[Balayya=58, Chiru=63, NTR=38, Nagarjuna=54, PSPK=48, Ramcharan=39, Venky=51]
+
+
+---------------------------------------------
+package map;
+import java.util.Comparator;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class TreeMapDecending {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeMap<String,Integer> hm=new TreeMap<>(new MyComparator());
+		hm.put("Chiru",55);
+		hm.put("Balayya",58);
+		hm.put("Nagarjuna", 53);
+		hm.put("Venky", 51);
+		hm.put("NTR", 38);
+		hm.put("PSPK", 48);
+		hm.put("Ramcharan", 39);
+		System.out.println("Tree Map:"+hm);
+		System.out.println(hm.put("Chiru",63));
+		
+		Set<String> s=hm.keySet();
+		System.out.println(s);
+		
+		Collection<Integer> c=hm.values();
+		System.out.println(c);
+		
+		Set s1=hm.entrySet();
+		Iterator i=s1.iterator();
+		while(i.hasNext())
+		{
+			Map.Entry m=(Map.Entry)i.next();
+			System.out.println(m.getKey()+"  "+m.getValue());
+			
+			if(m.getKey().equals("Nagarjuna"))
+				m.setValue(54);
+		}
+		System.out.println(s1);
+		
+	}
+
+}
+class MyComparator implements Comparator
+{
+	public int compare(Object o1,Object o2)
+	{
+		String s1=(String)o1;
+		String s2=o2.toString();
+		return s2.compareTo(s1);
+	}
+}
+
+Output:
+Tree Map:{Venky=51, Ramcharan=39, PSPK=48, Nagarjuna=53, NTR=38, Chiru=55, Balayya=58}
+55
+[Venky, Ramcharan, PSPK, Nagarjuna, NTR, Chiru, Balayya]
+[51, 39, 48, 53, 38, 63, 58]
+Venky  51
+Ramcharan  39
+PSPK  48
+Nagarjuna  53
+NTR  38
+Chiru  63
+Balayya  58
+[Venky=51, Ramcharan=39, PSPK=48, Nagarjuna=54, NTR=38, Chiru=63, Balayya=58]
+
+
+--------------------------------------------------------------------------------------------
+
+
+

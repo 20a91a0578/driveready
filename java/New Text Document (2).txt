@@ -1,0 +1,41 @@
+Collections::::
+____________________________
+____________________________
+Drawbacks of Arrays
+1.length of array is fixed.
+2.stores only homogeneous elements.
+3.It is not under any data structers,we have write logic for any operation manually.
+
+To overcome these Drawbacks COLLECTIONS CONCEPT is introdued.
+ArrayList<Integer> a1=new ArryaList<>();
+a1.add(5);
+a1.add(52);
+
+collection:
+To store the Elements.
+
+Collections::To  perform the operations
+
+Collectionn.max(a1);//output:::52
+Methods of Collections
+Collections.sort(list);
+Collections.copy(l1,l2);//TO COPY ONE LIST INTO ANOTHER LIST
+Collections.shuffle(LIST);//REAARANGE ALL THE ELEMENTS OF THE LIST
+Collections.reverse(LIST);//TO REVERSE THE ELEMENTS IN THE LIST
+Collections.min(LIST);//RETURNS THE MINIMUM ELEMENT IN THE LIST;
+
+Collection framework:::
+defines several classes and interfaces used to represent group of objects as a single entity
+List Interface
+[ArrayList,LinkedList,Vector,Stack]
+Queue  Interface
+[PriorityQueue]
+SetInterface
+[HashSet,LinkedHashedSet,TreeSet]
+
+Properties
+in List insertion order is preserved.
+inList duplicates are allowed.
+Heterogeneous elements are allowed.
+Null insertion is possible.
+
